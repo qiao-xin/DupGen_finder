@@ -1,2 +1,48 @@
 # DupGen_finder
-A pipeline used to identify different modes of duplicate gene pairs.
+DupGen_finder is a software package that can identify difference modes of duplicate gene pairs. [MCScanX](http://chibba.pgml.uga.edu/mcscan2/) is included in this package and it will be used to perform a step when running **DupGen_finder**.
+
+| | |
+| --- | --- |
+| Authors | Xin Qiao ([qiaoxin](https://github.com/qiao-xin)) |
+| Email   | <qiaoxinqx2011@126.com> |
+
+# Dependencies
+ - [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
+# Installation
+```bash
+git clone https://github.com/qiao-xin/DupGen_finder.git
+cd DupGen_finder
+make
+```
+
+# Running
+ - Before starting, you can get help information about **DupGen_finder** by running:
+```bash
+$ perl DupGen_finder.pl
+  Usage: perl DupGen_finder.pl -i data_directory -t target_species -c outgroup_species(comma_delimited) -o output_directory
+  #####################
+  Optional:
+  -x number_of_different_epoches (if specified, outgroup species must be provided in the order of divergence from the target species(most recent first), default: 1, only consider the transposed duplications that occurred after the divergence between target species and all outgroups )
+  -a 1 or 0(are segmental duplicates ancestral loci or not? default: 1, yes)
+  -d number_of_genes(maximum distance to call proximal, default: 10)
+  #####################
+  The following are optional MCScanX parameters:
+  -k match_score(cutoff score of collinear blocks for MCScanX, default: 50)
+  -g gap_penalty(gap penalty for MCScanX, default: -1)
+  -s match_size(number of genes required to call a collinear block for MCScanX, default: 5)
+  -e e_value(alignment significance for MCScanX, default: 1e-05)
+  -m max_gaps(maximum gaps allowed for MCScanX, default: 25)
+  -w overlap_window(maximum distance in terms of gene number, to collapse BLAST matches for MCScanX, default: 5)
+```
+
+## 1.File Preparation
+Users must prepare the input files by carefully reading the following instructions (1-4). We also provied the exmaple data 
+
+1. All input files should be stored under ONE folder(the "data_directory" parameter)
+2. For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:
+   - a. "[target_species].gff", a gene position file for the target species, following a tab-delimited format: "sp&chr_NO      gene    starting_position       ending_position"
+   - b. "[target_species].blast", a blastp output file (m8 format) for the target species (self-genome comparison).
+3. For each outgroup genome, please prepare two input files:
+   - a. "[target_species]_[outgroup_species].gff", a gene position file for the target_species and outgroup_species, following a tab-delimited format:"sp&chr_NO      gene    starting_position       ending_position"
+   - b. "[target_species]_[outgroup_species].blast", a blastp output file (m8 format) between the target and outgroup species (cross-genome comparison).
+4. For example, assuming that you are going to classify gene duplication modes in Arabidopsis thaliana (ID: Ath), using Nelumbo nucifera (ID: Nnu)as outgroups, you need to prepare 6 input files: "Ath.gff","Ath.blast", "Ath_Nnu.gff", "Ath_Nnu.blast"
