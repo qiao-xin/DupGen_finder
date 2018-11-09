@@ -11,6 +11,7 @@ The DupGen_finder was developed to identify different modes of duplicated gene p
 - [Perl](https://www.perl.org)
 
 # Installation
+
 ```bash
 git clone https://github.com/qiao-xin/DupGen_finder.git
 cd DupGen_finder
@@ -18,9 +19,13 @@ make
 ```
 
 # Running
- - Before starting, you can get help information about **DupGen_finder** by running:
+
+- You can simply run the following command to get help information about **DupGen_finder**:
+
 ```bash
 $ perl DupGen_finder.pl
+```
+```
   Usage: perl DupGen_finder.pl -i data_directory -t target_species -c outgroup_species(comma_delimited) -o output_directory
   #####################
   Optional:
