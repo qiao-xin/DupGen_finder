@@ -7,7 +7,7 @@ The DupGen_finder was developed to identify different modes of duplicated gene p
 | | Andrew Paterson ([PGML](http://www.plantgenome.uga.edu)) |
 | Email   | <qiaoxinqx2011@126.com> |
 
-# Dependencies
+## Dependencies
 - [Perl](https://www.perl.org)
 
 # Installation
