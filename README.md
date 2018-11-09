@@ -1,4 +1,4 @@
-# *DupGen_finder
+# DupGen_finder
 
 The DupGen_finder was developed to identify different modes of duplicated gene pairs. [MCScanX](http://chibba.pgml.uga.edu/mcscan2/) algorithm was incorporated in this pipeline.
 
