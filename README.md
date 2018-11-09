@@ -1,4 +1,4 @@
-# DupGen_finder
+# *DupGen_finder
 
 The DupGen_finder was developed to identify different modes of duplicated gene pairs. [MCScanX](http://chibba.pgml.uga.edu/mcscan2/) algorithm was incorporated in this pipeline.
 
@@ -25,7 +25,7 @@ make
 Pre-computed BLAST results and gene location information (GFF format) are required for running DupGen_finder successfully.
 
 1. For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:
-- a. "[target_species].gff", a gene position file for the target species, following a tab-delimited format: "sp&chr_NO      gene    starting_position       ending_position", for example, "Ath.gff".
+a. "[target_species].gff", a gene position file for the target species, following a tab-delimited format: "sp&chr_NO      gene    starting_position       ending_position". For example, "Ath.gff".
 
 ```
 Ath-Chr1	AT1G01010.1	3631	5899
@@ -35,7 +35,16 @@ Ath-Chr1	AT1G01040.2	23416	31120
 Ath-Chr1	AT1G01050.1	31170	33153
 ```
 
-   - b. "[target_species].blast", a blastp output file (m8 format) for the target species (self-genome comparison).
+b. "[target_species].blast", a blastp output file (m8 format) for the target species (self-genome comparison). For example, "Ath.blast".
+
+```
+ATCG00500.1	ATCG00500.1	100.00	488	0	0	1	488	1	488	0.0	 932
+ATCG00510.1	ATCG00510.1	100.00	37	0	0	1	37	1	37	2e-19	73.9
+ATCG00280.1	ATCG00280.1	100.00	473	0	0	1	473	1	473	0.0	 876
+ATCG00890.1	ATCG01250.1	100.00	389	0	0	1	389	1	389	0.0	 660
+ATCG00890.1	ATCG00890.1	100.00	389	0	0	1	389	1	389	0.0	 660
+```
+
 2. For the outgroup genome, please prepare two input files:
    - a. "[target_species]_[outgroup_species].gff", a gene position file for the target_species and outgroup_species, following a tab-delimited format:"sp&chr_NO      gene    starting_position       ending_position"
    - b. "[target_species]_[outgroup_species].blast", a blastp output file (m8 format) between the target and outgroup species (cross-genome comparison).
