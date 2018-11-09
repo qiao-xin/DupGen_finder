@@ -25,7 +25,16 @@ make
 Pre-computed BLAST results and gene location information (GFF format) are required for running DupGen_finder successfully.
 
 1. For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:
-   - a. "[target_species].gff", a gene position file for the target species, following a tab-delimited format: "sp&chr_NO      gene    starting_position       ending_position"
+   - a. "[target_species].gff", a gene position file for the target species, following a tab-delimited format: "sp&chr_NO      gene    starting_position       ending_position", for example, "Ath.gff".
+
+```
+Ath-Chr1	AT1G01010.1	3631	5899
+Ath-Chr1	AT1G01020.1	5928	8737
+Ath-Chr1	AT1G01030.1	11649	13714
+Ath-Chr1	AT1G01040.2	23416	31120
+Ath-Chr1	AT1G01050.1	31170	33153
+```
+
    - b. "[target_species].blast", a blastp output file (m8 format) for the target species (self-genome comparison).
 2. For the outgroup genome, please prepare two input files:
    - a. "[target_species]_[outgroup_species].gff", a gene position file for the target_species and outgroup_species, following a tab-delimited format:"sp&chr_NO      gene    starting_position       ending_position"
@@ -42,13 +51,12 @@ You can simply run the following command to get help information about **DupGen_
 $ perl DupGen_finder.pl
 ```
 
-Help information
+Help information:
 
 ```
-  Usage: perl DupGen_finder.pl -i data_directory -t target_species -c outgroup_species(comma_delimited) -o output_directory
+  Usage: perl DupGen_finder.pl -i data_directory -t target_species -c outgroup_species -o output_directory
   #####################
   Optional:
-  -x number_of_different_epoches (if specified, outgroup species must be provided in the order of divergence from the target species(most recent first), default: 1, only consider the transposed duplications that occurred after the divergence between target species and all outgroups )
   -a 1 or 0(are segmental duplicates ancestral loci or not? default: 1, yes)
   -d number_of_genes(maximum distance to call proximal, default: 10)
   #####################
