@@ -1,5 +1,5 @@
 # DupGen_finder
-DupGen_finder is a software package that can identify difference modes of duplicate gene pairs. [MCScanX](http://chibba.pgml.uga.edu/mcscan2/) is included in this package and it will be used to perform a step when running **DupGen_finder**.
+The DupGen_finder was developed to identify different modes of duplicated gene pairs. [MCScanX](http://chibba.pgml.uga.edu/mcscan2/) algorithm was incorporated in this pipeline.
 
 | | |
 | --- | --- |
