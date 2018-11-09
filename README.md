@@ -4,10 +4,12 @@ The DupGen_finder was developed to identify different modes of duplicated gene p
 | | |
 | --- | --- |
 | Authors | Xin Qiao ([qiaoxin](https://github.com/qiao-xin)) |
+| | Andrew Paterson ([PGML](http://www.plantgenome.uga.edu)) |
 | Email   | <qiaoxinqx2011@126.com> |
 
 # Dependencies
- - [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
+- [Perl](https://www.perl.org)
+
 # Installation
 ```bash
 git clone https://github.com/qiao-xin/DupGen_finder.git
