@@ -5,7 +5,6 @@ The DupGen_finder was developed to identify different modes of duplicated gene p
 | | |
 | --- | --- |
 | Authors | Xin Qiao ([qiaoxin](https://github.com/qiao-xin)) |
-| | Yupeng Wang |
 | | Andrew Paterson ([PGML](http://www.plantgenome.uga.edu)) |
 | Email   | <qiaoxinqx2011@126.com> |
 
@@ -23,11 +22,11 @@ make
 
 ## Prepeations
 
-Pre-computed BLAST results (```.blast``` file) and gene location information (```.gff``` file) are required for running DupGen_finder successfully.
+Pre-computed BLAST results and gene location information (GFF format) are required for running DupGen_finder successfully.
 
-***For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:***
+1. For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:
 
-1. "```*target_species*.gff```", a gene position file for the target species, following a tab-delimited format: "sp&chr_NO      gene    starting_position       ending_position". For example, "Ath.gff".
+a. "[target_species].gff", a gene position file for the target species, following a tab-delimited format: "sp&chr_NO      gene    starting_position       ending_position". For example, "Ath.gff".
 
 ```
 Ath-Chr1	AT1G01010.1	3631	5899
@@ -37,7 +36,7 @@ Ath-Chr1	AT1G01040.2	23416	31120
 Ath-Chr1	AT1G01050.1	31170	33153
 ```
 
-2. "```target_species.blast```", a blastp output file (m8 format) for the target species (self-genome comparison). For example, "Ath.blast".
+b. "[target_species].blast", a blastp output file (m8 format) for the target species (self-genome comparison). For example, "Ath.blast".
 
 ```
 ATCG00500.1	ATCG00500.1	100.00	488	0	0	1	488	1	488	0.0	 932
@@ -47,12 +46,10 @@ ATCG00890.1	ATCG01250.1	100.00	389	0	0	1	389	1	389	0.0	 660
 ATCG00890.1	ATCG00890.1	100.00	389	0	0	1	389	1	389	0.0	 660
 ```
 
-***For the outgroup genome, please prepare two input files:***
-
-1. "[target_species]_[outgroup_species].gff", a gene position file for the target_species and outgroup_species, following a tab-delimited format:"sp&chr_NO      gene    starting_position       ending_position"
-
-2. "[target_species]_[outgroup_species].blast", a blastp output file (m8 format) between the target and outgroup species (cross-genome comparison).
-For example, assuming that you are going to classify gene duplication modes in Arabidopsis thaliana (ID: Ath), using Nelumbo nucifera (ID: Nnu)as outgroups, you need to prepare 6 input files: "Ath.gff","Ath.blast", "Ath_Nnu.gff", "Ath_Nnu.blast"
+2. For the outgroup genome, please prepare two input files:
+   - a. "[target_species]_[outgroup_species].gff", a gene position file for the target_species and outgroup_species, following a tab-delimited format:"sp&chr_NO      gene    starting_position       ending_position"
+   - b. "[target_species]_[outgroup_species].blast", a blastp output file (m8 format) between the target and outgroup species (cross-genome comparison).
+3. For example, assuming that you are going to classify gene duplication modes in Arabidopsis thaliana (ID: Ath), using Nelumbo nucifera (ID: Nnu)as outgroups, you need to prepare 6 input files: "Ath.gff","Ath.blast", "Ath_Nnu.gff", "Ath_Nnu.blast"
 
 **NOTE**: All input files should be stored under ONE folder (the "data_directory" parameter)
 
@@ -85,6 +82,46 @@ Help information:
 Then you can identify different modes of duplicated gene pairs using **DupGen_finder**:
 
 ```bash
-$ perl /home/spark/soft/DupGen_finder/DupGen_finder.pl -i /home/spark/soft/DupGen_finder/data/ -t Ath -c Nnu -o /home/spark/soft/DupGen_finder/data/
+$ perl /home/spark/soft/DupGen_finder/DupGen_finder.pl -i /home/spark/soft/DupGen_finder/data/ -t Ath -c Nnu -o /home/spark/soft/DupGen_finder/results/
 ```
-**Note**: We 
+**Note**: Ath is a abbreviation for *A.thaliana*, Nnu represents *N.nucifera*. This command can identify the different modes of duplicated gene pairs in *A.thaliana* by using *N.nucifera* as a outgroup. We also recommend that the "data_directory" or "output_directory" should be given a absolute path.
+
+## Result Files
+### 1 - Gene pair files: Ath.segmental.pairs, Ath.tandem.pairs, Ath.proximal.pairs, Ath.transposed.pairs, Ath.dispersed.pairs.
+ 
+These files includes duplicated gene pairs derived from five modes of gene duplication, including segmental(**Ath.segmental.pairs**), tandem duplication(**Ath.tandem.pairs**), proximal duplication(**Ath.proximal.pairs**), transposed duplication(**Ath.transposed.pairs**), dispersed duplication(**Ath.dispersed.pairs**). The format of these files is as follows:
+```
+Duplicate 1	Location	Duplicate 2	Location	E-value
+AT1G01010.1	Ath-Chr1:3631	AT4G01550.1	Ath-Chr4:673862	5e-52
+AT1G01020.1	Ath-Chr1:5928	AT4G01510.1	Ath-Chr4:642733	5e-74
+AT1G01030.1	Ath-Chr1:11649	AT1G13260.1	Ath-Chr1:4542168	3e-45
+AT1G01050.1	Ath-Chr1:31170	AT3G53620.1	Ath-Chr3:19880504	6e-126
+AT1G01060.1	Ath-Chr1:33666	AT5G17300.1	Ath-Chr5:5690227	3e-30
+```
+
+### 2 - Ath.singletons
+
+It includes genes which loss their duplication
+```
+GeneID	Location
+AT2G32600.1	Ath-Chr2:13833545
+AT5G11810.1	Ath-Chr5:3808720
+AT4G16610.1	Ath-Chr4:9354321
+AT1G66520.1	Ath-Chr1:24816128
+AT1G51110.1	Ath-Chr1:18935329
+```
+
+### 3 - Ath.stats
+
+Number of gene pairs in each output files
+```
+Absolutes	Ath
+WGD-pairs	4352
+TD-pairs	2064
+PD-pairs	790
+TRD-pairs	4447
+HQD-pairs	3655
+```
+
+## Citation
+In preparation...
