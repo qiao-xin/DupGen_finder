@@ -25,7 +25,7 @@ make
 
 Pre-computed BLAST results (.blast) and gene location information (.gff) are required for running DupGen_finder successfully.
 
-***For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:
+***For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:***
 
 1. "[target_species].gff", a gene position file for the target species, following a tab-delimited format: "sp&chr_NO      gene    starting_position       ending_position". For example, "Ath.gff".
 
@@ -47,7 +47,7 @@ ATCG00890.1	ATCG01250.1	100.00	389	0	0	1	389	1	389	0.0	 660
 ATCG00890.1	ATCG00890.1	100.00	389	0	0	1	389	1	389	0.0	 660
 ```
 
-***For the outgroup genome, please prepare two input files:
+***For the outgroup genome, please prepare two input files:***
 
 1. "[target_species]_[outgroup_species].gff", a gene position file for the target_species and outgroup_species, following a tab-delimited format:"sp&chr_NO      gene    starting_position       ending_position"
 
