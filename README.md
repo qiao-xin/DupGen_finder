@@ -23,7 +23,7 @@ make
 
 ## Prepeations
 
-Pre-computed BLAST results (.blast) and gene location information (.gff) are required for running DupGen_finder successfully.
+Pre-computed BLAST results (**.blast**) and gene location information (**.gff**) are required for running DupGen_finder successfully.
 
 ***For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:***
 
