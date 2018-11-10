@@ -5,7 +5,7 @@ The DupGen_finder was developed to identify different modes of duplicated gene p
 | | |
 | --- | --- |
 | Authors | Xin Qiao ([qiaoxin](https://github.com/qiao-xin)) |
-| | Yupeng Wang ([PGML](http://www.plantgenome.uga.edu)) |
+| | Yupeng Wang |
 | | Andrew Paterson ([PGML](http://www.plantgenome.uga.edu)) |
 | Email   | <qiaoxinqx2011@126.com> |
 
@@ -27,7 +27,7 @@ Pre-computed BLAST results (```.blast``` file) and gene location information (``
 
 ***For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:***
 
-1. "*target_species*.gff", a gene position file for the target species, following a tab-delimited format: "sp&chr_NO      gene    starting_position       ending_position". For example, "Ath.gff".
+1. "```*target_species*.gff```", a gene position file for the target species, following a tab-delimited format: "sp&chr_NO      gene    starting_position       ending_position". For example, "Ath.gff".
 
 ```
 Ath-Chr1	AT1G01010.1	3631	5899
@@ -37,7 +37,7 @@ Ath-Chr1	AT1G01040.2	23416	31120
 Ath-Chr1	AT1G01050.1	31170	33153
 ```
 
-2. "```target_species```.blast", a blastp output file (m8 format) for the target species (self-genome comparison). For example, "Ath.blast".
+2. "```target_species.blast```", a blastp output file (m8 format) for the target species (self-genome comparison). For example, "Ath.blast".
 
 ```
 ATCG00500.1	ATCG00500.1	100.00	488	0	0	1	488	1	488	0.0	 932
