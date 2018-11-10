@@ -78,3 +78,10 @@ Help information:
   -m max_gaps(maximum gaps allowed for MCScanX, default: 25)
   -w overlap_window(maximum distance in terms of gene number, to collapse BLAST matches for MCScanX, default: 5)
 ```
+
+Then you can identify different modes of duplicated gene pairs using **DupGen_finder**:
+
+```bash
+$ perl /home/spark/soft/DupGen_finder/DupGen_finder.pl -i /home/spark/soft/DupGen_finder/data/ -t Ath -c Nnu -o /home/spark/soft/DupGen_finder/data/
+```
+**Note**: We 
