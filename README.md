@@ -25,9 +25,9 @@ make
 
 Pre-computed BLAST results (.blast) and gene location information (.gff) are required for running DupGen_finder successfully.
 
-1) For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:
+### For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:
 
-a. "[target_species].gff", a gene position file for the target species, following a tab-delimited format: "sp&chr_NO      gene    starting_position       ending_position". For example, "Ath.gff".
+- a. "[target_species].gff", a gene position file for the target species, following a tab-delimited format: "sp&chr_NO      gene    starting_position       ending_position". For example, "Ath.gff".
 
 ```
 Ath-Chr1	AT1G01010.1	3631	5899
@@ -37,7 +37,7 @@ Ath-Chr1	AT1G01040.2	23416	31120
 Ath-Chr1	AT1G01050.1	31170	33153
 ```
 
-b. "[target_species].blast", a blastp output file (m8 format) for the target species (self-genome comparison). For example, "Ath.blast".
+- b. "[target_species].blast", a blastp output file (m8 format) for the target species (self-genome comparison). For example, "Ath.blast".
 
 ```
 ATCG00500.1	ATCG00500.1	100.00	488	0	0	1	488	1	488	0.0	 932
@@ -47,7 +47,7 @@ ATCG00890.1	ATCG01250.1	100.00	389	0	0	1	389	1	389	0.0	 660
 ATCG00890.1	ATCG00890.1	100.00	389	0	0	1	389	1	389	0.0	 660
 ```
 
-For the outgroup genome, please prepare two input files:
+### For the outgroup genome, please prepare two input files:
    - a. "[target_species]_[outgroup_species].gff", a gene position file for the target_species and outgroup_species, following a tab-delimited format:"sp&chr_NO      gene    starting_position       ending_position"
    - b. "[target_species]_[outgroup_species].blast", a blastp output file (m8 format) between the target and outgroup species (cross-genome comparison).
 For example, assuming that you are going to classify gene duplication modes in Arabidopsis thaliana (ID: Ath), using Nelumbo nucifera (ID: Nnu)as outgroups, you need to prepare 6 input files: "Ath.gff","Ath.blast", "Ath_Nnu.gff", "Ath_Nnu.blast"
