@@ -24,7 +24,7 @@ make
 
 Pre-computed BLAST results and gene location information (GFF format) are required for running DupGen_finder successfully.
 
-1 -- For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:
+1. For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:
 
 a. "[target_species].gff", a gene position file for the target species, following a tab-delimited format: "sp&chr_NO      gene    starting_position       ending_position". For example, "Ath.gff".
 
