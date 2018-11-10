@@ -25,7 +25,7 @@ make
 
 Pre-computed BLAST results and gene location information (GFF format) are required for running DupGen_finder successfully.
 
-- 1. For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:
+For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:
 
 a. "[target_species].gff", a gene position file for the target species, following a tab-delimited format: "sp&chr_NO      gene    starting_position       ending_position". For example, "Ath.gff".
 
@@ -47,7 +47,7 @@ ATCG00890.1	ATCG01250.1	100.00	389	0	0	1	389	1	389	0.0	 660
 ATCG00890.1	ATCG00890.1	100.00	389	0	0	1	389	1	389	0.0	 660
 ```
 
-- 2. For the outgroup genome, please prepare two input files:
+2. For the outgroup genome, please prepare two input files:
    - a. "[target_species]_[outgroup_species].gff", a gene position file for the target_species and outgroup_species, following a tab-delimited format:"sp&chr_NO      gene    starting_position       ending_position"
    - b. "[target_species]_[outgroup_species].blast", a blastp output file (m8 format) between the target and outgroup species (cross-genome comparison).
 3. For example, assuming that you are going to classify gene duplication modes in Arabidopsis thaliana (ID: Ath), using Nelumbo nucifera (ID: Nnu)as outgroups, you need to prepare 6 input files: "Ath.gff","Ath.blast", "Ath_Nnu.gff", "Ath_Nnu.blast"
