@@ -1,4 +1,4 @@
-# DupGen_finder
+# *DupGen_finder*
 
 The DupGen_finder was developed to identify different modes of duplicated gene pairs. [MCScanX](http://chibba.pgml.uga.edu/mcscan2/) algorithm was incorporated in this pipeline.
 
@@ -63,11 +63,11 @@ ATCG00890.1	ATCG01250.1	100.00	389	0	0	1	389	1	389	0.0	 660
 ATCG00890.1	ATCG00890.1	100.00	389	0	0	1	389	1	389	0.0	 660
 ```
 
-**NOTE**: All input files should be stored under ONE folder (the "data_directory" parameter). For more on the parameters please see below.)
+**NOTE**: All input files should be stored under the same folder (the "data_directory" parameter). For more parameters please see below.
 
 ## Running
 
-You can simply run the following command to get help information about **DupGen_finder**:
+You can simply run the following command to get help information about ***DupGen_finder***:
 
 ```bash
 $ perl DupGen_finder.pl
