@@ -99,7 +99,12 @@ Here, **DupGen_finder** attempts to identify the different modes of duplicated g
 **Note**: We recommend that the "data_directory" or "output_directory" should be given a absolute path. For example, ```/home/the_path_to_your_data_directory/```
 
 ## Result Files
-### 1 - Duplicate gene pairs: Ath.wgd.pairs, Ath.tandem.pairs, Ath.proximal.pairs, Ath.transposed.pairs, Ath.dispersed.pairs
+### 1 - Duplicate gene pairs: 
+- Ath.wgd.pairs
+- Ath.tandem.pairs
+- Ath.proximal.pairs
+- Ath.transposed.pairs
+- Ath.dispersed.pairs
  
 These files includes duplicated gene pairs derived from five modes of gene duplication, including WGD (**Ath.wgd.pairs**), tandem duplication (**Ath.tandem.pairs**), proximal duplication (**Ath.proximal.pairs**), transposed duplication (**Ath.transposed.pairs**), dispersed duplication (**Ath.dispersed.pairs**). The gene pairs contained in these files looks like this (tab separated):
 ```
