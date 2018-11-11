@@ -94,7 +94,7 @@ A typical command to identify different modes of duplicated gene pairs in a give
 ```bash
 $ perl DupGen_finder.pl -i data/ -t Ath -c Nnu -o results/
 ```
-Here, **DupGen_finder** attempts to identify the different modes of duplicated gene pairs in *A.thaliana* by using *N.nucifera* as outgroup. All required data files should be stored under "data/". The output files will be stored under ```results/```. Ath: *A.thaliana*, Nnu: *N.nucifera*.
+Here, **DupGen_finder** attempts to identify the different modes of duplicated gene pairs in *A.thaliana* by using *N.nucifera* as outgroup. All required data files should be stored under this directory "data/". The output files will be stored under this directory ```results/```. Ath: *A.thaliana*, Nnu: *N.nucifera*.
 
 **Note**: We recommend that the "data_directory" or "output_directory" should be given a absolute path. For example, ```/home/the_path_to_your_data_directory/```
 
