@@ -67,7 +67,7 @@ ATCG00890.1	ATCG01250.1	100.00	389	0	0	1	389	1	389	0.0	 660
 ATCG00890.1	ATCG00890.1	100.00	389	0	0	1	389	1	389	0.0	 660
 ```
 
-**NOTE**: All input files should be stored under ONE folder (the "data_directory" parameter)
+**NOTE**: All input files should be stored under ONE folder (the "data_directory" parameter). For more on the parameters please see below.)
 
 ## Running
 
