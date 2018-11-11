@@ -27,15 +27,15 @@ Pre-computed BLAST results and gene location information (GFF format) are requir
 
 1. For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:
 
-- "[target_species].gff", a gene position file for the target species, following a tab-delimited format: "sp&chr_NO      gene    starting_position       ending_position". For example, "Ath.gff".
+- ```target_species.gff```, a gene position file for the target species, following a tab-delimited format: "sp&chr_NO      gene    starting_position       ending_position". For example, "Ath.gff".
 
-- "[target_species].blast", a blastp output file (m8 format) for the target species (self-genome comparison). For example, "Ath.blast".
+- ```target_species.blast```, a blastp output file (-outfmt 6) for the target species (self-genome comparison). For example, "Ath.blast".
 
 
 2. For the outgroup genome, please prepare two input files:
-   - a. "[target_species]_[outgroup_species].gff", a gene position file for the target_species and outgroup_species, following a tab-delimited format:"sp&chr_NO      gene    starting_position       ending_position"
-   - b. "[target_species]_[outgroup_species].blast", a blastp output file (m8 format) between the target and outgroup species (cross-genome comparison).
-3. For example, assuming that you are going to classify gene duplication modes in *Arabidopsis thaliana* (ID: Ath), using *Nelumbo nucifera* (ID: Nnu)as outgroups, you need to prepare 4 input files: "Ath.gff","Ath.blast", "Ath_Nnu.gff", "Ath_Nnu.blast"
+- ```[target_species]_[outgroup_species].gff```, a gene position file for the target_species and outgroup_species, following a tab-delimited format:"sp&chr_NO      gene    starting_position       ending_position"
+- ```[target_species]_[outgroup_species].blast```, a blastp output file (-outfmt 6) between the target and outgroup species (cross-genome comparison).
+3. For example, assuming that you are going to classify gene duplication modes in *Arabidopsis thaliana* (ID: Ath), using *Nelumbo nucifera* (ID: Nnu)as outgroups, you need to prepare 4 input files: ```Ath.gff```,"Ath.blast", "Ath_Nnu.gff", "Ath_Nnu.blast"
 
 ```
 Ath-Chr1	AT1G01010.1	3631	5899
