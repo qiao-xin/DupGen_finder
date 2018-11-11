@@ -74,8 +74,8 @@ $ perl DupGen_finder.pl
 
 This command will print a full list of options:
 ```
-  Usage: perl DupGen_finder.pl -i data_directory -t target_species -c outgroup_species -o output_directory
-  #####################
+Usage: perl DupGen_finder.pl -i data_directory -t target_species -c outgroup_species -o output_directory
+#####################
   Optional:
   -a 1 or 0(are segmental duplicates ancestral loci or not? default: 1, yes)
   -d number_of_genes(maximum distance to call proximal, default: 10)
