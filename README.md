@@ -118,7 +118,7 @@ AT1G01060.1	Ath-Chr1:33666	AT5G17300.1	Ath-Chr5:5690227	3e-30
 
 ### 2 - Ath.singletons
 
-It includes genes that have no homologous genes.
+It includes genes that have no homologous genes within target species.
 ```
 GeneID	Location
 AT2G32600.1	Ath-Chr2:13833545
