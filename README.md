@@ -15,7 +15,7 @@ The DupGen_finder was developed to identify different modes of duplicated gene p
 
 ## Installation
 
-```bash
+```
 git clone https://github.com/qiao-xin/DupGen_finder.git
 cd DupGen_finder
 make
@@ -67,15 +67,13 @@ ATCG00890.1	ATCG00890.1	100.00	389	0	0	1	389	1	389	0.0	 660
 
 ## Running
 
-You can simply run the following command to get help information about **DupGen_finder**:
-
+Please run the following command to get help information about **DupGen_finder**:
 ```bash
 $ perl DupGen_finder.pl
 ```
 
-Help information:
-
-```bash
+This command will produce a full list of options:
+```
   Usage: perl DupGen_finder.pl -i data_directory -t target_species -c outgroup_species -o output_directory
   #####################
   Optional:
@@ -91,12 +89,11 @@ Help information:
   -w overlap_window(maximum distance in terms of gene number, to collapse BLAST matches for MCScanX, default: 5)
 ```
 
-Then you can identify different modes of duplicated gene pairs using **DupGen_finder**:
-
+A typical command to identify different modes of duplicated gene pairs in a given species could look like this:
 ```bash
 $ perl DupGen_finder.pl -i data/ -t Ath -c Nnu -o results/
 ```
-**Note**: Ath is a abbreviation for *A.thaliana*, Nnu represents *N.nucifera*. This command can identify the different modes of duplicated gene pairs in *A.thaliana* by using *N.nucifera* as a outgroup. We also recommend that the "data_directory" or "output_directory" should be given a absolute path.
+**Note**: Ath: *A.thaliana*, Nnu: *N.nucifera*. This command can identify the different modes of duplicated gene pairs in *A.thaliana* by using *N.nucifera* as a outgroup. We also recommend that the "data_directory" or "output_directory" should be given a absolute path.
 
 ## Result Files
 ### 1 - Gene pair files: Ath.segmental.pairs, Ath.tandem.pairs, Ath.proximal.pairs, Ath.transposed.pairs, Ath.dispersed.pairs.
