@@ -27,9 +27,9 @@ Pre-computed BLAST results and gene location information (GFF format) are requir
 
 1. For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:
 
-- ```target_species.gff```, a gene position file for the target species, following a tab-delimited format. For example, "Ath.gff".
+ - ```target_species.gff```, a gene position file for the target species, following a tab-delimited format. For example, "Ath.gff".
 
-- ```target_species.blast```, a blastp output file (-outfmt 6) for the target species (self-genome comparison). For example, "Ath.blast".
+ - ```target_species.blast```, a blastp output file (-outfmt 6) for the target species (self-genome comparison). For example, "Ath.blast".
 
 2. For the outgroup genome, please prepare two input files:
 - ```[target_species]_[outgroup_species].gff```, a gene position file for the target_species and outgroup_species, following a tab-delimited format.
