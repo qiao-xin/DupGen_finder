@@ -38,6 +38,7 @@ Pre-computed BLAST results and gene location information (GFF format) are requir
 3. For example, assuming that you are going to classify gene duplication modes in *Arabidopsis thaliana* (abbr: Ath), using *Nelumbo nucifera* (abbr: Nnu) as outgroup, you need to prepare 4 input files: ```Ath.gff```,```Ath.blast```, ```Ath_Nnu.gff```, ```Ath_Nnu.blast```
 
 ```Ath.gff``` is in the following format (tab separated):
+
 ```abbr-chr_NO      gene    starting_position       ending_position```
 
 The data in ```Ath.gff``` looks like this (tab separated):
@@ -50,6 +51,7 @@ Ath-Chr1	AT1G01050.1	31170	33153
 ```
 
 ```Ath.blast``` is in the following format (tab separated):
+
 ```query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score```
 
 The data in ```Ath.blast``` looks like this (tab separated):
