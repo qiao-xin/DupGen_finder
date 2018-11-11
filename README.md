@@ -4,7 +4,7 @@ The DupGen_finder was developed to identify different modes of duplicated gene p
 
 | | |
 | --- | --- |
-| Authors | Xin Qiao ([qiaoxin](https://github.com/qiao-xin)) |
+| Authors | Xin Qiao ([Xin Qiao](https://github.com/qiao-xin)) |
 | | Yupeng Wang ([Yupeng Wang](https://github.com/wyp1125)) |
 | | Andrew Paterson ([PGML](http://www.plantgenome.uga.edu)) |
 | Email   | <qiaoxinqx2011@126.com> |
@@ -35,10 +35,12 @@ Pre-computed BLAST results and gene location information (GFF format) are requir
 - ```[target_species]_[outgroup_species].gff```, a gene position file for the target_species and outgroup_species, following a tab-delimited format.
 - ```[target_species]_[outgroup_species].blast```, a blastp output file (-outfmt 6) between the target and outgroup species (cross-genome comparison).
 
-3. For example, assuming that you are going to classify gene duplication modes in *Arabidopsis thaliana* (abbr: Ath), using *Nelumbo nucifera* (abbr: Nnu) as outgroups, you need to prepare 4 input files: ```Ath.gff```,```Ath.blast```, ```Ath_Nnu.gff```, ```Ath_Nnu.blast```
+3. For example, assuming that you are going to classify gene duplication modes in *Arabidopsis thaliana* (abbr: Ath), using *Nelumbo nucifera* (abbr: Nnu) as outgroup, you need to prepare 4 input files: ```Ath.gff```,```Ath.blast```, ```Ath_Nnu.gff```, ```Ath_Nnu.blast```
 
-"sp&chr_NO      gene    starting_position       ending_position"
+```Ath.gff``` is in the following format (tab separated):
+abbr-chr_NO      gene    starting_position       ending_position
 
+The data in ```Ath.gff``` looks like this (tab separated):
 ```
 Ath-Chr1	AT1G01010.1	3631	5899
 Ath-Chr1	AT1G01020.1	5928	8737
@@ -47,6 +49,7 @@ Ath-Chr1	AT1G01040.2	23416	31120
 Ath-Chr1	AT1G01050.1	31170	33153
 ```
 
+Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
 ```
 ATCG00500.1	ATCG00500.1	100.00	488	0	0	1	488	1	488	0.0	 932
 ATCG00510.1	ATCG00510.1	100.00	37	0	0	1	37	1	37	2e-19	73.9
