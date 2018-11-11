@@ -30,13 +30,12 @@ Pre-computed BLAST results and gene location information (GFF format) are requir
 	- ```target_species.blast```, a blastp output file (-outfmt 6) for the target species (self-genome comparison). For example, "Ath.blast".
 
 2. For the outgroup genome, please prepare two input files:
-- ```[target_species]_[outgroup_species].gff```, a gene position file for the target_species and outgroup_species, following a tab-delimited format.
-- ```[target_species]_[outgroup_species].blast```, a blastp output file (-outfmt 6) between the target and outgroup species (cross-genome comparison).
+	- ```[target_species]_[outgroup_species].gff```, a gene position file for the target_species and outgroup_species, following a tab-delimited format.
+	- ```[target_species]_[outgroup_species].blast```, a blastp output file (-outfmt 6) between the target and outgroup species (cross-genome comparison).
 
 3. For example, assuming that you are going to classify gene duplication modes in *Arabidopsis thaliana* (abbr: Ath), using *Nelumbo nucifera* (abbr: Nnu) as outgroup, you need to prepare 4 input files: ```Ath.gff```,```Ath.blast```, ```Ath_Nnu.gff```, ```Ath_Nnu.blast```
 
 ```Ath.gff``` is in the following format (tab separated):
-
 ```
 abbr-chr_NO      gene    starting_position       ending_position
 ```
@@ -51,7 +50,6 @@ Ath-Chr1	AT1G01050.1	31170	33153
 ```
 
 ```Ath.blast``` is in the following format (tab separated):
-
 ```
 query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
 ```
