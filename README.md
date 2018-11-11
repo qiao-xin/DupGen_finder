@@ -67,7 +67,7 @@ ATCG00890.1	ATCG00890.1	100.00	389	0	0	1	389	1	389	0.0	 660
 
 ## Running
 
-You can simply run the following command to get help information about ***DupGen_finder***:
+You can simply run the following command to get help information about **DupGen_finder**:
 
 ```bash
 $ perl DupGen_finder.pl
@@ -75,7 +75,7 @@ $ perl DupGen_finder.pl
 
 Help information:
 
-```
+```bash
   Usage: perl DupGen_finder.pl -i data_directory -t target_species -c outgroup_species -o output_directory
   #####################
   Optional:
@@ -94,7 +94,7 @@ Help information:
 Then you can identify different modes of duplicated gene pairs using **DupGen_finder**:
 
 ```bash
-$ perl /home/spark/soft/DupGen_finder/DupGen_finder.pl -i /home/spark/soft/DupGen_finder/data/ -t Ath -c Nnu -o /home/spark/soft/DupGen_finder/results/
+$ perl DupGen_finder.pl -i data/ -t Ath -c Nnu -o results/
 ```
 **Note**: Ath is a abbreviation for *A.thaliana*, Nnu represents *N.nucifera*. This command can identify the different modes of duplicated gene pairs in *A.thaliana* by using *N.nucifera* as a outgroup. We also recommend that the "data_directory" or "output_directory" should be given a absolute path.
 
