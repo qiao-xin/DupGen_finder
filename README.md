@@ -1,4 +1,4 @@
-# *DupGen_finder*
+# DupGen_finder
 
 The DupGen_finder was developed to identify different modes of duplicated gene pairs. [MCScanX](http://chibba.pgml.uga.edu/mcscan2/) algorithm was incorporated in this pipeline.
 
@@ -21,7 +21,7 @@ cd DupGen_finder
 make
 ```
 
-## Prepeations
+## Preparing Data files
 
 Pre-computed BLAST results and gene location information (GFF format) are required for running DupGen_finder successfully.
 
@@ -49,7 +49,7 @@ Ath-Chr1	AT1G01040.2	23416	31120
 Ath-Chr1	AT1G01050.1	31170	33153
 ```
 
-```Ath.blast``` is in the following format (tab separated):
+```Ath.blast``` is in the following format:
 ```
 query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
 ```
@@ -67,12 +67,12 @@ ATCG00890.1	ATCG00890.1	100.00	389	0	0	1	389	1	389	0.0	 660
 
 ## Running
 
-Please run the following command to get help information about **DupGen_finder**:
+```cd``` to **DupGen_finder directory** and then run the following command to get help information about **DupGen_finder**:
 ```bash
 $ perl DupGen_finder.pl
 ```
 
-This command will produce a full list of options:
+This command will print a full list of options:
 ```
   Usage: perl DupGen_finder.pl -i data_directory -t target_species -c outgroup_species -o output_directory
   #####################
@@ -93,7 +93,10 @@ A typical command to identify different modes of duplicated gene pairs in a give
 ```bash
 $ perl DupGen_finder.pl -i data/ -t Ath -c Nnu -o results/
 ```
-**Note**: Ath: *A.thaliana*, Nnu: *N.nucifera*. This command can identify the different modes of duplicated gene pairs in *A.thaliana* by using *N.nucifera* as a outgroup. We also recommend that the "data_directory" or "output_directory" should be given a absolute path.
+Here, **DupGen_finder** attempts to identify the different modes of duplicated gene pairs in *A.thaliana* by using *N.nucifera* as a outgroup. Ath: *A.thaliana*, Nnu: *N.nucifera*.
+
+**Note**: In order to work properly the current working directory must contain the sequence files to be analysed.
+We also recommend that the "data_directory" or "output_directory" should be given a absolute path.
 
 ## Result Files
 ### 1 - Gene pair files: Ath.segmental.pairs, Ath.tandem.pairs, Ath.proximal.pairs, Ath.transposed.pairs, Ath.dispersed.pairs.
