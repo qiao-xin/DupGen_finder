@@ -39,7 +39,9 @@ Pre-computed BLAST results and gene location information (GFF format) are requir
 
 ```Ath.gff``` is in the following format (tab separated):
 
-```abbr-chr_NO      gene    starting_position       ending_position```
+```
+abbr-chr_NO      gene    starting_position       ending_position
+```
 
 The data in ```Ath.gff``` looks like this (tab separated):
 ```
@@ -52,7 +54,9 @@ Ath-Chr1	AT1G01050.1	31170	33153
 
 ```Ath.blast``` is in the following format (tab separated):
 
-```query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score```
+```
+query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+```
 
 The data in ```Ath.blast``` looks like this (tab separated):
 ```
