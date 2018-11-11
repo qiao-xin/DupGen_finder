@@ -76,17 +76,17 @@ This command will print a full list of options:
 ```
 Usage: perl DupGen_finder.pl -i data_directory -t target_species -c outgroup_species -o output_directory
 #####################
-  Optional:
-  -a 1 or 0(are segmental duplicates ancestral loci or not? default: 1, yes)
-  -d number_of_genes(maximum distance to call proximal, default: 10)
-  #####################
-  The following are optional MCScanX parameters:
-  -k match_score(cutoff score of collinear blocks for MCScanX, default: 50)
-  -g gap_penalty(gap penalty for MCScanX, default: -1)
-  -s match_size(number of genes required to call a collinear block for MCScanX, default: 5)
-  -e e_value(alignment significance for MCScanX, default: 1e-05)
-  -m max_gaps(maximum gaps allowed for MCScanX, default: 25)
-  -w overlap_window(maximum distance in terms of gene number, to collapse BLAST matches for MCScanX, default: 5)
+Optional:
+-a 1 or 0(are segmental duplicates ancestral loci or not? default: 1, yes)
+-d number_of_genes(maximum distance to call proximal, default: 10)
+#####################
+The following are optional MCScanX parameters:
+-k match_score(cutoff score of collinear blocks for MCScanX, default: 50)
+-g gap_penalty(gap penalty for MCScanX, default: -1)
+-s match_size(number of genes required to call a collinear block for MCScanX, default: 5)
+-e e_value(alignment significance for MCScanX, default: 1e-05)
+-m max_gaps(maximum gaps allowed for MCScanX, default: 25)
+-w overlap_window(maximum distance in terms of gene number, to collapse BLAST matches for MCScanX, default: 5)
 ```
 
 A typical command to identify different modes of duplicated gene pairs in a given species could look like this:
@@ -95,8 +95,7 @@ $ perl DupGen_finder.pl -i data/ -t Ath -c Nnu -o results/
 ```
 Here, **DupGen_finder** attempts to identify the different modes of duplicated gene pairs in *A.thaliana* by using *N.nucifera* as a outgroup. Ath: *A.thaliana*, Nnu: *N.nucifera*.
 
-**Note**: In order to work properly the current working directory must contain the sequence files to be analysed.
-We also recommend that the "data_directory" or "output_directory" should be given a absolute path.
+**Note**: We recommend that the "data_directory" or "output_directory" should be given a absolute path. For example, ```/home/the_path_to_your_data_directory/```
 
 ## Result Files
 ### 1 - Gene pair files: Ath.segmental.pairs, Ath.tandem.pairs, Ath.proximal.pairs, Ath.transposed.pairs, Ath.dispersed.pairs.
