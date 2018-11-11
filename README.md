@@ -63,6 +63,11 @@ ATCG00890.1	ATCG01250.1	100.00	389	0	0	1	389	1	389	0.0	 660
 ATCG00890.1	ATCG00890.1	100.00	389	0	0	1	389	1	389	0.0	 660
 ```
 
+Here is a typical parameter setting for generating the xyz.blast file:
+```bash
+blastp -query query_file -db database -evalue 1e-10 -max_target_seqs 5 -outfmt 6 -out xyz.blast
+```
+
 **NOTE**: All input files should be stored under the same folder (the "data_directory" parameter). For more parameters please see below.
 
 ## Running
@@ -99,7 +104,7 @@ Here, **DupGen_finder** attempts to identify the different modes of duplicated g
 **Note**: We recommend that the "data_directory" or "output_directory" should be given a absolute path. For example, ```/home/the_path_to_your_data_directory/```
 
 ## Result Files
-### 1 - Duplicate gene pairs: 
+### 1 - Duplicated gene pairs: 
 - Ath.wgd.pairs
 - Ath.tandem.pairs
 - Ath.proximal.pairs
