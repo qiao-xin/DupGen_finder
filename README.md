@@ -155,4 +155,4 @@ HQD-pairs	3655
 ```
 
 ## Citation
-In preparation...
+The manuscript is under review.
