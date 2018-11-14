@@ -5,6 +5,7 @@ The DupGen_finder was developed to identify different modes of duplicated gene p
 | | |
 | --- | --- |
 | Authors | Xin Qiao ([Xin Qiao](https://github.com/qiao-xin)) |
+| | Qionghou Li ([Qionghou Li](https://github.com/LQHHHHH)) |
 | | Yupeng Wang ([Yupeng Wang](https://github.com/wyp1125)) |
 | | Andrew Paterson ([PGML](http://www.plantgenome.uga.edu)) |
 | Email   | <qiaoxinqx2011@126.com> |
@@ -154,4 +155,4 @@ HQD-pairs	3655
 ```
 
 ## Citation
-In preparation...
+The manuscript is under review.
