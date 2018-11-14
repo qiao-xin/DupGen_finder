@@ -2,6 +2,9 @@
 
 The DupGen_finder was developed to identify different modes of duplicated gene pairs. [MCScanX](http://chibba.pgml.uga.edu/mcscan2/) algorithm was incorporated in this pipeline.
 
+![Ath.synteny.blocks.ks.distri](DupGene_finder/data/The flowchart of DupGen_finder pipeline.png)
+
+
 | | |
 | --- | --- |
 | Authors | Xin Qiao ([Xin Qiao](https://github.com/qiao-xin)) |
