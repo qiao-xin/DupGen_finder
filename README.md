@@ -117,7 +117,7 @@ A typical command to identify different modes of duplicated gene pairs in a give
 ```bash
 $ perl DupGen_finder.pl -i data/ -t Ath -c Nnu -o results/
 ```
-Here, **DupGen_finder** attempts to identify the different modes of duplicated gene pairs in *A.thaliana* by using *N.nucifera* as outgroup. All required data files should be stored under this directory ```data/```. The output files will be stored under this directory ```results/```. Ath: *A.thaliana*, Nnu: *N.nucifera*.
+Here, **DupGen_finder** attempts to identify the different modes of duplicated gene pairs in *A.thaliana* by using *N.nucifera* as outgroup. All required data files should be stored under this directory ```data/```. The output files will be stored under this directory ```results/```. For more details please see below. Ath: *A.thaliana*, Nnu: *N.nucifera*.
 
 **Note**: We recommend that the "data_directory" or "output_directory" should be given a full path. For example, ```/home/the_path_to_your_data_directory/```
 
@@ -163,5 +163,9 @@ TRD-pairs	4447
 DSD-pairs	17750
 ```
 
+### 4 - Collinearity files
+- Ath.collinearity
+- Ath_Nnu.collinearity
+
 ## Citation
-Qiao X, Li Q, Yin H, Qi K, Li L, Wang R, Zhang S* and Paterson A*: Gene duplication and evolution in recurring polyploidization-diploidization cycles in plants. Under Review.
+*Qiao X, Li Q, Yin H, Qi K, Li L, Wang R, Zhang S* and Paterson A*: Gene duplication and evolution in recurring polyploidization-diploidization cycles in plants. Under Review.*
