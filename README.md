@@ -164,4 +164,4 @@ DSD-pairs	17750
 ```
 
 ## Citation
-Qiao X, Li Q, Yin H, Qi K, Li L, Wang R, Zhang S* and Paterson A*: Gene duplication and evolution in recurring polyploidization-diploidization cycles in plants. Under review.
+Qiao X, Li Q, Yin H, Qi K, Li L, Wang R, Zhang S* and Paterson A*: Gene duplication and evolution in recurring polyploidization-diploidization cycles in plants. Under Review.
