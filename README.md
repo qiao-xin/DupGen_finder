@@ -2,9 +2,14 @@
 
 The DupGen_finder was developed to identify different modes of duplicated gene pairs. [MCScanX](http://chibba.pgml.uga.edu/mcscan2/) algorithm was incorporated in this pipeline.
 
-<img src="https://github.com/LQHHHHH/DupGen_finder/blob/master/data/The%20flowchart%20of%20DupGen_finder%20pipeline.png"  height="500" width="300" align='center'>
+<p align="center">
+<img src="https://github.com/LQHHHHH/DupGen_finder/blob/master/data/The%20flowchart%20of%20DupGen_finder%20pipeline.png"  height="500" width="300">
+<p align="center">
 
-*figure 1: The flowchart of DupGen_finder pipeline*
+<t align="center">
+  figure 1: The flowchart of DupGen_finder pipeline
+</t>
+
 
 | | |
 | --- | --- |
