@@ -602,7 +602,7 @@ foreach $key (keys %gmd2)
 ########################The number of different modes of gene duplications####################
 $out1=">$options{o}\/$options{t}.pairs.stats";
 open(output1,$out1);
-print output1 "Types\tNumber of gene pairs\n";
+print output1 "Types\tNO. of gene pairs\n";
 print output1 "WGD-pairs\t$wp\nTD-pairs\t$tp\nPD-pairs\t$pp\nTRD-pairs\t$trp\nDSD-pairs\t$mdp\n";
 close output1;
 
