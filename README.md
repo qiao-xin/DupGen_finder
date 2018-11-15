@@ -155,13 +155,13 @@ AT1G51110.1	Ath-Chr1:18935329
 
 The number of duplicated gene pairs derived from different modes.
 ```
-Absolutes	Ath
+Types	NO. of gene pairs
 WGD-pairs	4352
 TD-pairs	2064
 PD-pairs	790
 TRD-pairs	4447
-HQD-pairs	3655
+DSD-pairs	17750
 ```
 
 ## Citation
-The manuscript is under review.
+Qiao X, Li Q, Yin H, Qi K, Li L, Wang R, Zhang S* and Paterson A*: Gene duplication and evolution in recurring polyploidization-diploidization cycles in plants. Under review.
