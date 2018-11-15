@@ -10,6 +10,7 @@ The DupGen_finder was developed to identify different modes of duplicated gene p
 | | Andrew Paterson ([PGML](http://www.plantgenome.uga.edu)) |
 | Email   | <qiaoxinqx2011@126.com> |
 
+## The schematic diagram of DupGen_finder pipeline
 <p align="center">
 <img src="https://github.com/LQHHHHH/DupGen_finder/blob/master/data/The%20flowchart%20of%20DupGen_finder%20pipeline.png"  height="500" width="300">
 <p align="center">
@@ -18,7 +19,7 @@ The DupGen_finder was developed to identify different modes of duplicated gene p
   figure 1: The flowchart of DupGen_finder pipeline
 </t>
 
-### Contents
+## Contents
 * [Dependencies](#dependencies)
 * [Installation](#installation)
 * [Preparing Data files](#preparing-data-files)
