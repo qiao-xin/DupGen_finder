@@ -121,7 +121,7 @@ Here, **DupGen_finder** attempts to identify the different modes of duplicated g
 
 **Note**: We recommend that the "data_directory" or "output_directory" should be given a full path. For example, ```/home/the_path_to_your_data_directory/```
 
-### GenDup_finder-unique
+### *GenDup_finder-unique*
 Moreover, to eliminate redundant duplicate genes among different modes, we provide a stricter version of **GenDup_finder** named **GenDup_finder-unique** by which each duplicate gene was assigned to a unique mode after all of the duplicated gene pairs were classified into different gene duplication types. The priority of the duplicate genes is as follows: WGD > tandem > proximal > transposed > dispersed.
 
 ```bash
