@@ -39,7 +39,7 @@ cd DupGen_finder
 make
 ```
 
-## Preparing Data files
+## Preparing input files
 
 Pre-computed BLAST results and gene location information (GFF format) are required for running DupGen_finder successfully.
 
