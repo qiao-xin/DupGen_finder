@@ -16,7 +16,7 @@ The DupGen_finder was developed to identify different modes of duplicated gene p
 <p align="center">
 
 <t align="center">
-  figure 1: The flowchart of DupGen_finder pipeline
+  Figure 1: The flowchart of DupGen_finder pipeline
 </t>
 
 ## Contents
@@ -115,9 +115,9 @@ The following are optional MCScanX parameters:
 
 A typical command to identify different modes of duplicated gene pairs in a given species could look like this:
 ```bash
-$ perl DupGen_finder.pl -i data/ -t Ath -c Nnu -o results/
+$ perl DupGen_finder.pl -i data -t Ath -c Nnu -o results
 ```
-Here, **DupGen_finder** attempts to identify the different modes of duplicated gene pairs in *A.thaliana* by using *N.nucifera* as outgroup. All required data files should be stored under this directory ```data/```. The output files will be stored under this directory ```results/```. For more details please see below. Ath: *A.thaliana*, Nnu: *N.nucifera*.
+Here, **DupGen_finder** attempts to identify the different modes of duplicated gene pairs in *A.thaliana* by using *N.nucifera* as outgroup. All required data files should be stored under this directory ```data```. The output files will be stored under this directory ```results```. For more details please see below. Ath: *A.thaliana*, Nnu: *N.nucifera*.
 
 **Note**: We recommend that the "data_directory" or "output_directory" should be given a full path. For example, ```/home/the_path_to_your_data_directory/```
 
@@ -125,7 +125,7 @@ Here, **DupGen_finder** attempts to identify the different modes of duplicated g
 Moreover, to eliminate redundant duplicate genes among different modes, we provide a stricter version of **GenDup_finder** named **GenDup_finder-unique** by which each duplicate gene was assigned to a unique mode after all of the duplicated gene pairs were classified into different gene duplication types. The priority of the duplicate genes is as follows: WGD > tandem > proximal > transposed > dispersed.
 
 ```bash
-$ perl DupGen_finder-unique.pl -i data/ -t Ath -c Nnu -o results/
+$ perl DupGen_finder-unique.pl -i data -t Ath -c Nnu -o results
 ```
 
 ## Result Files
