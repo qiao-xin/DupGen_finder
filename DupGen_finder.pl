@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 
+# Xin Qiao, 15 Nov 2018
+# Xin Qiao, 05 Mar 2019, revised
+
 use Getopt::Std;
 
 %options=();
@@ -112,15 +115,18 @@ if(exists $options{d})
 {
 $cut=$options{d};
 }
-#############read blastp of target genome#########################
+#############Read blastp of target genome#########################
 %bla1=();
 %bla2=();
+%bla3=();#added on 05 Mar 2019
 %blae=();
 %gmd3=();
 open(input,$t_bla);
 while($line=<input>)
 {
 @a=split("\t",$line);
+$bla3{$a[0]}=$a[10];#added on 05 Mar 2019
+$bla3{$a[1]}=$a[10];#added on 05 Mar 2019
 if($a[0] ne $a[1] && exists $gid{$a[0]} && exists $gid{$a[1]})
 {
 $key="$a[0]\t$a[1]";
@@ -199,7 +205,7 @@ foreach $key (sort(keys %h))
 print output2 "$key\t$gch{$key}\:$glc{$key}\n";
 $wg++;
 }
-####################tandem&proximal#####################
+####################Tandem&Proximal#####################
 $out1=">$options{o}\/$options{t}.tandem.pairs";
 $out2=">$options{o}\/$options{t}.tandem.genes";
 $out3=">$options{o}\/$options{t}.proximal.pairs";
@@ -338,7 +344,7 @@ foreach $key (sort(keys %k))
 print output4 "$key\t$gch{$key}\:$glc{$key}\n";
 $pg++;
 }
-####################transposed################
+####################Transposed################
 %epoch_pair=();
 $trp=0;
 $trg=0;
@@ -476,7 +482,7 @@ foreach $key (sort(keys %tran_genes2))
 	$epoch_pair{$temp}=$k;
 }
 }
-#############################dispersed#####################################
+#############################Dispersed#####################################
 %disp_genes=();
 %hash=();
 %hash2=();
@@ -585,7 +591,7 @@ $temp="$key\t$hash4{$key}";
 print output5 "$key\t$gch{$key}\:$glc{$key}\t$hash4{$key}\t$gch{$hash4{$key}}\:$glc{$hash4{$key}}\t$blae{$temp}\n";
 $mdp++;
 }
-###############################singletons################################
+###############################Singletons################################
 $sg=0;
 $out=">$options{o}\/$options{t}.singletons";
 open(output,$out);
@@ -593,12 +599,13 @@ print output "GeneID\tLocation\n";
 
 foreach $key (keys %gmd2)
 {
-	if($gmd2{$key} == 0)
+	if(!exists $bla3{$key})#revised on 05 Mar 2019
 	{
 		print output "$key\t$gch{$key}\:$glc{$key}\n";
 		$sg++;
 	}
 }
+#print "$sg\n";
 ########################The number of different modes of gene duplications####################
 $out1=">$options{o}\/$options{t}.pairs.stats";
 open(output1,$out1);
