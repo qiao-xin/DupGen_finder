@@ -523,7 +523,7 @@ foreach $key (sort(keys %tran_genes2))
 %hash2=();
 %ident=();
 %disp_genes2=();
-%hash4=();
+%hash3=();#revised on 06 Mar 2019
 $hdp=0;
 $hdg=0;
 foreach $key (keys %bla2)
@@ -591,10 +591,25 @@ foreach $key1 (sort(keys %hash2))
 		{
 			$pair="$key1\t$key2";
 			print output5 "$key1\t$gch{$key1}\:$glc{$key1}\t$key2\t$gch{$key2}\:$glc{$key2}\t$blae{$pair}\n";
-			print output6 "$key1\t$gch{$key1}\:$glc{$key1}\n$key2\t$gch{$key2}\:$glc{$key2}\n";
 			$hdp++;
-			$hdg++;
-			$hdg++;
+			#####################revised on 06 Mar 2019
+			if(!exists $hash3{$key1})
+			{
+				print output6 "$key1\t$gch{$key1}\:$glc{$key1}\n";
+				$hdg++;
+				$hash3{$key1}='A';
+			}
+			if(!exists $hash3{$key2})
+			{
+				print output6 "$key2\t$gch{$key2}\:$glc{$key2}\n";
+				$hdg++;
+				$hash3{$key2}='A';
+			}
+			#print output6 "$key1\t$gch{$key1}\:$glc{$key1}\n$key2\t$gch{$key2}\:$glc{$key2}\n";
+			#$hdp++;
+			#$hdg++;
+			#$hdg++;
+			####################
 		}
 	}
 }
