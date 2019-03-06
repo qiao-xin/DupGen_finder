@@ -605,10 +605,6 @@ foreach $key1 (sort(keys %hash2))
 				$hdg++;
 				$hash3{$key2}='A';
 			}
-			#print output6 "$key1\t$gch{$key1}\:$glc{$key1}\n$key2\t$gch{$key2}\:$glc{$key2}\n";
-			#$hdp++;
-			#$hdg++;
-			#$hdg++;
 			####################
 		}
 	}
