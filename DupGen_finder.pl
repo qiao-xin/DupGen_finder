@@ -174,16 +174,20 @@ if($line!~/\#/ && $line ne "")
 {
 @a=split("\t",$line);
 $t_key="$a[1]\t$a[2]";
+$t_key_r="$a[2]\t$a[1]";#revised on 12 Apr 2019
 if(exists $blae{$t_key})
 {
 $temp=$blae{$t_key};
 $gmd3{$t_key}=1;
+$gmd3{$t_key_r}=1;#revised on 12 Apr 2019
 }
 else
 {
 $t_key="$a[2]\t$a[1]";
+$t_key_r="$a[1]\t$a[2]";#revised on 12 Apr 2019
 $temp=$blae{$t_key};
 $gmd3{$t_key}=1;
+$gmd3{$t_key_r}=1;#revised on 12 Apr 2019
 }
 print output1 "$a[1]\t$gch{$a[1]}\:$glc{$a[1]}\t$a[2]\t$gch{$a[2]}\:$glc{$a[2]}\t$temp\n";
 $wp++;
