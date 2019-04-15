@@ -3,6 +3,7 @@
 # Xin Qiao, 15 Nov 2018
 # Xin Qiao, 05 Mar 2019, revised
 # Xin Qiao, 13 Apr 2019, revised
+# Xin Qiao, 15 Apr 2019, revised
 
 use Getopt::Std;
 
@@ -282,6 +283,8 @@ if($tan_pairs{$key}==1)
 {
 $t_key="$a[0]\t$a[1]";
 $t_key_r="$a[1]\t$a[0]";
+if($gmd3{$t_key} == 0 && $gmd3{$t_key_r}==0)#revised on 15 Apr 2019
+{
 if(exists $blae{$t_key})
 {
 $temp=$blae{$t_key};
@@ -307,11 +310,14 @@ $gmd{$a[$i]}=2;
 $gmd2{$a[$i]}=2;
 }
 }
+}#revised on 15 Apr 2019
 }
 else
 {
 $t_key="$a[0]\t$a[1]";
 $t_key_r="$a[1]\t$a[0]";
+if($gmd3{$t_key} == 0 && $gmd3{$t_key_r}==0)#revised on 15 Apr 2019
+{
 if(exists $blae{$t_key})
 {
 $temp=$blae{$t_key};
@@ -337,6 +343,7 @@ $gmd{$a[$i]}=3;
 $gmd2{$a[$i]}=3;
 }
 }
+}#revised on 15 Apr 2019
 }
 }
 foreach $key (sort(keys %h))
