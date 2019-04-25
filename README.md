@@ -38,8 +38,11 @@ cd ~/software  # or any directory of your choice
 git clone https://github.com/qiao-xin/DupGen_finder.git
 cd DupGen_finder
 make
+chmod 775 DupGen_finder.pl
+chmod 775 DupGen_finder-unique.pl
 export PATH="~/software/DupGen_finder:$PATH"
 ```
+Please replace ~/software above with whatever you like, but it must contain DupGen_finder. To avoid setting PATH everytime, please insert the export command in your .bashrc or .bash_profile.
 
 ## Preparing input files
 
@@ -92,15 +95,15 @@ blastp -query query_file -db database -evalue 1e-10 -max_target_seqs 5 -outfmt 6
 
 ## Running
 
-```cd``` to **DupGen_finder software directory** and then run the following command to get help information about **DupGen_finder**:
+Run the following command to get help information about **DupGen_finder**:
 
 ```bash
-$ perl DupGen_finder.pl
+$ DupGen_finder.pl
 ```
 
 This command will print a full list of options:
 ```
-Usage: perl DupGen_finder.pl -i data_directory -t target_species -c outgroup_species -o output_directory
+Usage: DupGen_finder.pl -i data_directory -t target_species -c outgroup_species -o output_directory
 #####################
 Optional:
 -a 1 or 0(are segmental duplicates ancestral loci or not? default: 1, yes)
@@ -117,7 +120,7 @@ The following are optional MCScanX parameters:
 
 A typical command to identify different modes of duplicated gene pairs in a given species could look like this:
 ```bash
-$ perl DupGen_finder.pl -i data -t Ath -c Nnu -o results
+$ DupGen_finder.pl -i data -t Ath -c Nnu -o results
 ```
 Here, **DupGen_finder** attempts to identify the different modes of duplicated gene pairs in *A.thaliana* by using *N.nucifera* as outgroup. All required data files should be stored under this directory ```data```. The output files will be stored under this directory ```results```. For more details please see below. Ath: *A.thaliana*, Nnu: *N.nucifera*.
 
@@ -127,7 +130,7 @@ Here, **DupGen_finder** attempts to identify the different modes of duplicated g
 Moreover, to eliminate redundant duplicate genes among different modes, we provide a stricter version of **DupGen_finder** named **DupGen_finder-unique** by which each duplicate gene was assigned to a unique mode after all of the duplicated gene pairs were classified into different gene duplication types. The priority of the duplicate genes is as follows: WGD > tandem > proximal > transposed > dispersed.
 
 ```bash
-$ perl DupGen_finder-unique.pl -i data -t Ath -c Nnu -o results
+$ DupGen_finder-unique.pl -i data -t Ath -c Nnu -o results
 ```
 
 ## Result Files
