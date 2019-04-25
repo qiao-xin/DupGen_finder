@@ -4,6 +4,7 @@
 # Xin Qiao, 05 Mar 2019, revised
 # Xin Qiao, 13 Apr 2019, revised
 # Xin Qiao, 15 Apr 2019, revised
+# Xin Qiao, 25 Apr 2019, revised
 
 use Getopt::Std;
 
@@ -11,7 +12,7 @@ use Getopt::Std;
 getopts("i:t:o:c:d:k:g:s:e:m:w:a:x:", \%options);
 if(!exists $options{i} || !exists $options{t} || !exists $options{o} || !exists $options{c})
 {
-print "Usage: perl DupGen_finder.pl -i data_directory -t target_species -c outgroup_species -o output_directory\n";
+print "Usage: DupGen_finder.pl -i data_directory -t target_species -c outgroup_species -o output_directory\n";#revised on 25 Apr 2019
 print "#####################\nOptional:\n";
 print "-a 1 or 0(are segmental duplicates ancestral loci or not? default: 1, yes)\n";
 print "-d number_of_genes(maximum distance to call proximal, default: 10)\n";
@@ -81,12 +82,12 @@ $mcscanx_para=$mcscanx_para." -$para[$i] $options{$para[$i]}";
 ########################################################################
 $in="$options{i}\/$options{t}";
 $out="$options{o}\/$options{t}";
-system("./MCScanX $in $out $mcscanx_para");
+system("MCScanX $in $out $mcscanx_para");#revised on 25 Apr 2019
 for($i=0;$i<=$#ogrp;$i++)
 {
 $in="$options{i}\/$options{t}_$ogrp[$i]";
 $out="$options{o}\/$options{t}_$ogrp[$i]";
-system("./MCScanX $in $out $mcscanx_para");
+system("MCScanX $in $out $mcscanx_para");#revised on 25 Apr 2019
 system("rm $out.gff.sorted");
 }
 ########################################################################
