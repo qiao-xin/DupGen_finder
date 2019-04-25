@@ -41,7 +41,7 @@ make
 
 ## Preparing input files
 
-Pre-computed BLAST results and gene location information (GFF format) are required for running DupGen_finder successfully.
+Pre-computed BLAST results (-outfmt 6) and gene location information (GFF format) are required for running DupGen_finder successfully.
 
 1. For the target genome in which gene duplicaiton modes will be classified, please prepare two input files:
 	- ```target_species.gff```, a gene position file for the target species, following a tab-delimited format. For example, "Ath.gff".
@@ -51,7 +51,7 @@ Pre-computed BLAST results and gene location information (GFF format) are requir
 	- ```[target_species]_[outgroup_species].gff```, a gene position file for the target_species and outgroup_species, following a tab-delimited format.
 	- ```[target_species]_[outgroup_species].blast```, a blastp output file (-outfmt 6) between the target and outgroup species (cross-genome comparison).
 
-3. For example, assuming that you are going to classify gene duplication modes in *Arabidopsis thaliana* (Ath), using *Nelumbo nucifera* (Nnu) as outgroup, you need to prepare 4 input files: ```Ath.gff```,```Ath.blast```, ```Ath_Nnu.gff```, ```Ath_Nnu.blast```
+For example, assuming that you are going to classify gene duplication modes in *Arabidopsis thaliana* (Ath), using *Nelumbo nucifera* (Nnu) as outgroup, you need to prepare 4 input files: ```Ath.gff```,```Ath.blast```, ```Ath_Nnu.gff```, ```Ath_Nnu.blast```
 
 ```Ath.gff``` is in the following format (tab separated):
 ```
@@ -86,7 +86,7 @@ Here is a typical parameter setting for generating the xyz.blast file:
 blastp -query query_file -db database -evalue 1e-10 -max_target_seqs 5 -outfmt 6 -out xyz.blast
 ```
 
-**NOTE**: All input files should be stored under the same folder (the "data_directory" parameter). For more parameters please see below.
+**NOTE**: All input files should be stored under the same folder (the "-i" option). For more parameters please see below.
 
 ## Running
 
