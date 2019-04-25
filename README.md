@@ -42,7 +42,7 @@ chmod 775 DupGen_finder.pl
 chmod 775 DupGen_finder-unique.pl
 export PATH="~/software/DupGen_finder:$PATH"
 ```
-Please replace ~/software above with whatever you like, but it must contain DupGen_finder. To avoid setting PATH everytime, please insert the export command in your .bashrc or .bash_profile.
+Please replace ```~/software``` above with whatever you like, but it must contain ```DupGen_finder```. To avoid setting ```PATH``` everytime, please insert the export command in your ```.bashrc``` or ```.bash_profile```.
 
 Test you can run DupGen_finder:
 ```
