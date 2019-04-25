@@ -34,9 +34,11 @@ The DupGen_finder was developed to identify different modes of duplicated gene p
 ## Installation
 
 ```
+cd ~/software  # or any directory of your choice
 git clone https://github.com/qiao-xin/DupGen_finder.git
 cd DupGen_finder
 make
+export PATH="~/software/DupGen_finder:$PATH"
 ```
 
 ## Preparing input files
