@@ -44,6 +44,8 @@ export PATH=~/software/DupGen_finder:$PATH
 ```
 Please replace ```~/software``` above with whatever you like, but it must contain ```DupGen_finder```. To avoid setting ```PATH``` everytime, please insert the export command in your ```.bashrc``` or ```.bash_profile```.
 
+***Note:*** If you have installed [MCScanX](http://chibba.pgml.uga.edu/mcscan2/) software before installing ```DupGen_finder``` in your system, please set ```PATH``` everytime instead of insert the export command in your ```.bashrc``` to avoid the conflict between [MCScanX](http://chibba.pgml.uga.edu/mcscan2/) software and the custom MCScanX algorithm implemented in ```DupGen_finder```.
+
 Test you can run DupGen_finder:
 ```
 DupGen_finder.pl
