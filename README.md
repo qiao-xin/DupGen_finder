@@ -188,4 +188,4 @@ DSD-pairs	16130
 - Ath_Nnu.collinearity
 
 ## Citation
-*Qiao X, Li Q, Yin H, Qi K, Li L, Wang R, Zhang S, Paterson AH: [Gene duplication and evolution in recurring polyploidization–diploidization cycles in plants.](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1650-2) Genome Biology 2019, 20:38.*
+*[Qiao X, Li Q, Yin H, Qi K, Li L, Wang R, Zhang S, Paterson AH: Gene duplication and evolution in recurring polyploidization–diploidization cycles in plants. Genome Biology 2019, 20:38.](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1650-2)*
