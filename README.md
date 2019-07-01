@@ -38,8 +38,8 @@ cd ~/software  # or any directory of your choice
 git clone https://github.com/qiao-xin/DupGen_finder.git
 cd DupGen_finder
 make
-chmod 775 DupGen_finder.pl
-chmod 775 DupGen_finder-unique.pl
+chmod 755 DupGen_finder.pl
+chmod 755 DupGen_finder-unique.pl
 export PATH=~/software/DupGen_finder:$PATH
 ```
 Please replace ```~/software``` above with whatever you like, but it must contain ```DupGen_finder```. To avoid setting ```PATH``` everytime, please insert the export command in your ```.bashrc``` or ```.bash_profile```.
