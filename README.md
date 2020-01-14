@@ -23,7 +23,7 @@ The DupGen_finder was developed to identify different modes of duplicated gene p
 ## Contents
 * [Dependencies](#dependencies)
 * [Installation](#installation)
-* [Preparing Data files](#preparing-data-files)
+* [Preparing input files](#preparing-input-files)
 * [Running](#running)
 * [Result Files](#result-files)
 * [Citation](#citation)
@@ -39,19 +39,21 @@ cd ~/software  # or any directory of your choice
 git clone https://github.com/qiao-xin/DupGen_finder.git
 cd DupGen_finder
 make
-chmod 755 DupGen_finder.pl
-chmod 755 DupGen_finder-unique.pl
-export PATH=~/software/DupGen_finder:$PATH
+chmod 775 DupGen_finder.pl
+chmod 775 DupGen_finder-unique.pl
+chmod 775 set_PATH.sh
+source set_PATH.sh
 ```
-Replace  ```~/software/DupGen_finder```  with the actual path of your installed ```DupGen_finder```. To avoid setting ```PATH``` everytime, please insert the export command in your ```.bashrc``` or ```.bash_profile```.
-
-**Note:** If you have installed [MCScanX](http://chibba.pgml.uga.edu/mcscan2/) software before installing ```DupGen_finder``` in your system, please set ```PATH``` everytime instead of inserting the export command in your ```.bashrc``` to avoid the conflict between [MCScanX](http://chibba.pgml.uga.edu/mcscan2/) software and the custom MCScanX algorithm implemented in ```DupGen_finder```.
 
 Test you can run DupGen_finder:
 ```
 DupGen_finder.pl
 ```
 DupGen_finder should print its 'help' text.
+
+**\*\*Note\*\***
+
+DupGen_finder software package includes a custom MCScanX algorithm which can output sorted `gff` files such as `Ath.gff.sorted`, and is slightly different from the original MCScanX algorithm implemented in [MCScanX](http://chibba.pgml.uga.edu/mcscan2/) software package.
 
 ## Preparing input files
 
