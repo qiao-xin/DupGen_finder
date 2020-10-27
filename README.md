@@ -34,7 +34,7 @@ The DupGen_finder was developed to identify different modes of duplicated gene p
 
 ## Installation
 
-```
+```bash
 cd ~/software  # or any directory of your choice
 git clone https://github.com/qiao-xin/DupGen_finder.git
 cd DupGen_finder
@@ -46,7 +46,7 @@ source set_PATH.sh
 ```
 
 Test you can run DupGen_finder:
-```
+```bash
 DupGen_finder.pl
 ```
 DupGen_finder should print its 'help' text.
