@@ -118,7 +118,7 @@ diamond makedb --in Ath.pep -d Ath
 diamond blastp -d Ath -q Ath.pep -o Ath.blast -p 20 --sensitive --max-target-seqs 5 --evalue 1e-10 --quiet
 ```
 
-**NOTE**: All input files should be stored under the same folder (the "-i" option). For more parameters please see below.
+**NOTE: All input files should be stored under the same folder (the "-i" option). For more parameters please see below.**
 
 ## Running
 
