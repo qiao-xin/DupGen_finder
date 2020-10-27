@@ -69,6 +69,8 @@ Pre-computed BLAST results (-outfmt 6) and gene location information (GFF format
 
 For example, assuming that you are going to classify gene duplication modes in *Arabidopsis thaliana* (Ath), using *Nelumbo nucifera* (Nnu) as outgroup, you need to prepare 4 input files: ```Ath.gff```,```Ath.blast```, ```Ath_Nnu.gff```, ```Ath_Nnu.blast```
 
+**gff file**
+
 ```Ath.gff``` is in the following format (tab separated):
 ```
 abbr-chr_NO      gene    starting_position       ending_position
@@ -82,6 +84,23 @@ Ath-Chr1	AT1G01030.1	11649	13714
 Ath-Chr1	AT1G01040.2	23416	31120
 Ath-Chr1	AT1G01050.1	31170	33153
 ```
+
+The below command can be used to creat ```Ath_Nnu.gff```:
+```bash
+cat Ath.gff Nnu.gff >Ath_Nnu.gff
+```
+
+The data in ```Ath_Nnu.gff``` looks like this (tab separated):
+```
+Ath-Chr1	AT1G01010.1	3631	5899
+Ath-Chr1	AT1G01020.1	5928	8737
+...
+Nnu-megascaffold_32	NNU_00001-RA	57481	63788
+Nnu-megascaffold_32	NNU_00002-RA	32491	41125
+...
+```
+
+**blast file**
 
 ```Ath.blast``` is in the following format:
 ```
@@ -117,8 +136,8 @@ diamond makedb --in Ath.pep -d Ath
 # Align protein query sequences against the reference database
 diamond blastp -d Ath -q Ath.pep -o Ath.blast -p 20 --sensitive --max-target-seqs 5 --evalue 1e-10 --quiet
 ```
-
-**NOTE: All input files should be stored under the same folder (the "-i" option). For more parameters please see below.**
+---
+**NOTE: All above input files should be stored under the same folder (the "-i" option). For more parameters please see below.**
 
 ## Running
 
