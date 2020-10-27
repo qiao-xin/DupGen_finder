@@ -97,9 +97,25 @@ ATCG00890.1	ATCG01250.1	100.00	389	0	0	1	389	1	389	0.0	 660
 ATCG00890.1	ATCG00890.1	100.00	389	0	0	1	389	1	389	0.0	 660
 ```
 
-Here is a typical parameter setting for generating the xyz.blast file:
+Here is the typical parameter setting for generating the xyz.blast file:
+
+The example file ```Ath.pep``` contains the whole genome protein sequences (FASTA format) of Arabidopsis.
+
+- For BLAST software
 ```bash
+# Create a reference database
+makeblastdb -in Ath.pep -dbtype prot -title Ath -parse_seqids -out Ath
+# Align protein query sequences against the reference database
 blastp -query query_file -db database -evalue 1e-10 -max_target_seqs 5 -outfmt 6 -out xyz.blast
+# For example
+blastp -query Ath.pep -db Ath -evalue 1e-10 -max_target_seqs 5 -outfmt 6 -out Ath.blast
+```
+- For DIAMOND software
+```bash
+# Create a reference database
+diamond makedb --in Ath.pep -d Ath
+# Align protein query sequences against the reference database
+diamond blastp -d Ath -q Ath.pep -o Ath.blast -p 20 --sensitive --max-target-seqs 5 --evalue 1e-10 --quiet
 ```
 
 **NOTE**: All input files should be stored under the same folder (the "-i" option). For more parameters please see below.
