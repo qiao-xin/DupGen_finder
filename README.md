@@ -73,7 +73,7 @@ For example, assuming that you are going to classify gene duplication modes in *
 
 ```Ath.gff``` is in the following format (tab separated):
 ```
-abbr-chr_NO      gene    starting_position       ending_position
+Species_abbrev-Chr_ID	gene_ID	start_position	end_position
 ```
 
 The data in ```Ath.gff``` looks like this (tab separated):
