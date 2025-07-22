@@ -38,10 +38,8 @@ cd ~/software  # or any directory of your choice
 git clone https://github.com/qiao-xin/DupGen_finder.git
 cd DupGen_finder
 make
-chmod 775 DupGen_finder.pl
-chmod 775 DupGen_finder-unique.pl
-chmod 775 set_PATH.sh
-source set_PATH.sh
+sh add_PATH_to_bash.sh
+source ~/.bashrc
 ```
 
 Test you can run DupGen_finder:
